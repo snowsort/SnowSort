@@ -13,15 +13,12 @@ for row in l:
         else:
             csv2[key].append(value)
 import csv
-print(csv2)
 file_1 = open('Station de ski.csv', 'r')
 csv3 = csv.DictReader(file_1, delimiter=',')
 nom_stations = []
 for ligne in csv3:
     nom_stations.append(ligne['Abondance'])  # "nom_station" est le nom de la colonne contenant les noms des stations
 nom_stations.insert(0,'Abondance')
-print(nom_stations)
-print(csv2)
 liste_zéro=[]
 o=len(nom_stations)
 for bonjour in range(0,o):
